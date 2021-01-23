@@ -2,7 +2,7 @@ package multiDimensionalArray;
 
 import java.util.Scanner;
 
-public class maxNMinValue1 {
+public class MaxNMinValue1 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

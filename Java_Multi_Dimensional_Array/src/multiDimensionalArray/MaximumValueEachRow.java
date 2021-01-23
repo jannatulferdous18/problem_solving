@@ -2,7 +2,7 @@ package multiDimensionalArray;
 
 import java.util.Scanner;
 
-public class maximumValueEachRow {
+public class MaximumValueEachRow {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the row number:");

@@ -2,7 +2,7 @@ package multiDimensionalArray;
 
 import java.util.Scanner;
 
-public class minimumValueEachColumn {
+public class MinimumValueEachColumn {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
