@@ -23,12 +23,10 @@ public class UpperTriangleMatrix {
 			}
 			System.out.println();
 		}
-		int check_upperTriangle;
 		int flag = 0;
 		for (int i = 1; i < row; i++) {
 			for (int j = 0; j < i; j++) {
-				check_upperTriangle = twoD_arr[i][j];
-				if (check_upperTriangle == 0) {
+				if (twoD_arr[i][j] == 0) {
 					flag = 1;
 				} else {
 					flag = 0;
