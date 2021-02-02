@@ -23,22 +23,26 @@ public class UpperTriangleMatrix {
 			}
 			System.out.println();
 		}
-		int flag = 0;
-		for (int i = 1; i < row; i++) {
-			for (int j = 0; j < i; j++) {
-				if (twoD_arr[i][j] == 0) {
-					flag = 1;
-				} else {
-					flag = 0;
-					break;
+		if (row != column) {
+			System.out.println("Matrix should be a Square Matrix to preoceed");
+		} else {
+			int flag = 0;
+			for (int i = 1; i < row; i++) {
+				for (int j = 0; j < i; j++) {
+					if (twoD_arr[i][j] == 0) {
+						flag = 1;
+					} else {
+						flag = 0;
+						break;
+					}
 				}
 			}
-		}
-		if (flag == 1) {
-			System.out.println("\nUpper Triangular Matrix");
-		} else {
-			System.out.println("\nNot Triangular Matrix");
+			if (flag == 1) {
+				System.out.println("\nMatrix is upper triangular matrix");
+			} else {
+				System.out.println("\nMatrix is not a upper triangular matrix");
 
+			}
 		}
 	}
 
