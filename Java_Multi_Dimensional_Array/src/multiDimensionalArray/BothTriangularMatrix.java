@@ -30,38 +30,42 @@ public class BothTriangularMatrix {
 		}
 
 		else {
-			for (int i = 1; i < row; i++) {
-				for (int j = 0; j < i; j++) {
-					if (twoD_arr[i][j] == 0) {
-						upperTriangular = 1;
-					} else {
-						upperTriangular = 0;
-						break;
-					}
-				}
-
+			Boolean isLower = isLowerTriangular(twoD_arr, row, column);
+			Boolean isUpper = isUpperTriangular(twoD_arr, row, column);
+			if (isUpper && isLower) {
+				System.out.println("Lower as well as Upper Triangular Matrix");
+			} else if (isLower && !isUpper) {
+				System.out.println("Lower Triangular Matrix");
+			} else if (isUpper && !isLower) {
+				System.out.println("Upper Triangular Matrix");
+			} else {
+				System.out.println("Neither Upper nor Lower Triangular Matrix");
 			}
-			for (int i = 0; i < row; i++) {
-				for (int j = i + 1; j < column; j++) {
-					if (twoD_arr[i][j] == 0) {
-						lowerTriangular = 1;
-					} else {
-						lowerTriangular = 0;
-						break;
-					}
 
+		}
+	}
+
+	private static Boolean isUpperTriangular(int[][] twoD_arr, int row, int column) {
+		for (int i = 1; i < row; i++) {
+			for (int j = 0; j < i; j++) {
+				if (twoD_arr[i][j] != 0) {
+					return false;
 				}
 			}
 		}
-		if (lowerTriangular == 1 && upperTriangular == 1) {
-			System.out.println("Lower as well as Upper Triangular Matrix");
-		} else if (lowerTriangular == 1 && upperTriangular == 0) {
-			System.out.println("Lower Triangular Matrix");
-		} else if (upperTriangular == 1 && lowerTriangular == 0) {
-			System.out.println("Upper Triangular Matrix");
-		} else {
-			System.out.println("Neither Upper nor Lower Triangular Matrix");
+		return true;
+	}
+
+	private static Boolean isLowerTriangular(int[][] twoD_arr, int row, int column) {
+		for (int i = 0; i < row; i++) {
+			for (int j = i + 1; j < column; j++) {
+				if (twoD_arr[i][j] != 0) {
+					return false;
+				}
+
+			}
 		}
+		return true;
 	}
 
 }
