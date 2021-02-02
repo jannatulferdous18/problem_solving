@@ -23,23 +23,27 @@ public class LowerTriangleMatrix {
 			}
 			System.out.println();
 		}
-		int flag = 0;
-		for (int i = 0; i < row; i++) {
-			for (int j = i + 1; j < column; j++) {
-				if (twoD_arr[i][j] == 0) {
-					flag = 1;
-				} else {
-					flag = 0;
-					break;
-				}
-
+		if (row != column) {
+			System.out.println("Matrix should be a Square Matrix to preoceed");
+		} else {
+			Boolean isLowerTraingular = isLowerTriangular(twoD_arr, row, column);
+			if (isLowerTraingular) {
+				System.out.println("Matrix is a lower triangular matrix");
+			} else {
+				System.out.println("Matrix is not a lower triangular matrix");
 			}
 		}
-		if (flag == 1) {
-			System.out.println("Lower Triangular Matrix");
-		} else {
-			System.out.println("Not Lower Triangular Matrix");
+	}
+
+	private static Boolean isLowerTriangular(int[][] twoD_arr, int row, int column) {
+		for (int i = 0; i < row; i++) {
+			for (int j = i + 1; j < column; j++) {
+				if (twoD_arr[i][j] != 0) {
+					return false;
+				}
+			}
 		}
+		return true;
 	}
 
 }
