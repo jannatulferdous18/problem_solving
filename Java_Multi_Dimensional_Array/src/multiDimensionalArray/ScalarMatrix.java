@@ -23,9 +23,6 @@ public class ScalarMatrix {
 			}
 			System.out.println();
 		}
-
-		int upperTriangular = 0;
-		int lowerTriangular = 0;
 		if (row != column) {
 			System.out.println("Matrix must contain equal size of row and column");
 		}
