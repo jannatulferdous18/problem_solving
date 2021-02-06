@@ -16,6 +16,7 @@ public class ReplaceColumnByRow {
 				twoD_arr[i][j] = sc.nextInt();
 			}
 		}
+		
 		System.out.print("The matrix you entered: \n");
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < column; j++) {
@@ -23,6 +24,7 @@ public class ReplaceColumnByRow {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Replacing column by row: ");
 		for (int j = 0; j < column; j++) {
 			for (int i = 0; i < twoD_arr.length; i++) {
